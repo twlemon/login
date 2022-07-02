@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+@import './style/variables.scss';
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+input {
+  border-radius: 0.5rem;
+  margin: 0;
+  min-width: 4em;
+  font-weight: 500;
+  color: $white;
+  border-width: 2px;
+  border-color: $white;
+  background-color: transparent;
+  box-shadow: none!important;
+  padding: 0.3rem;
+  border: 1px solid #d3d5d7;
+  &:focus {
+    outline: 0;
+    border-color: $blue-accent !important;
+  }
+  &[type='checkbox'] {
+    display: none;
+  }
+}
+
+button {
+  display: inline-block;
+  font-weight: 500;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: $blue-main;
+  border: 1px solid $blue-main;
+  padding: 0.3rem 2.5rem;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease-out,background-color 0.3s ease-out,border-color 0.3s ease-out,box-shadow 0.3s ease-out;
+}

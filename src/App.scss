@@ -1,0 +1,52 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: calc(10px + 2vmin);
+  color: midnightblue;
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .main {
+    background: white;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .input-group,
+    .remember-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      font-size: medium;
+
+      .form-check-span {
+        width: 80%;
+
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .input-group {
+      label {
+        margin-right: 0.5rem;
+      }
+
+      input {
+        width: 80%;
+      }
+    }
+  }
+}
