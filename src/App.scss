@@ -1,9 +1,11 @@
+@import './style/variables.scss';
+
 .App {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   font-size: calc(10px + 2vmin);
-  color: midnightblue;
+  color: $blue-main;
   position: relative;
 
   img {
@@ -12,7 +14,7 @@
   }
 
   .main {
-    background: white;
+    background: $white;
     height: 100vh;
     position: absolute;
     right: 0;
@@ -46,6 +48,40 @@
 
       input {
         width: 80%;
+      }
+    }
+  }
+}
+
+// 視窗寬度 <= 768px (iPad Air)
+@media screen and (max-width: 820px) {
+  .App {
+    color: $gray;
+
+    img {
+      display: none;
+    }
+
+    .main {
+      width: 100vw;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url('./static/background.jpg') bottom no-repeat;
+      p, span {
+        font-weight: 600;
+      }
+      .input-group, .remember-group svg, button {
+        color: $gray;
+        input:focus {
+          border-color: $gray !important;
+          border: 1.5px solid;
+        }
+      }
+      button {
+        background: darken($gray, 15%);
+        border: darken($gray, 15%);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      }
+      ::placeholder {
+        color: darken($gray, 15%);
       }
     }
   }
